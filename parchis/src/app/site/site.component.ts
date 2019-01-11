@@ -10,7 +10,10 @@ export class SiteComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit() {
+    $.getScript('../assets/js/jquery.min.js');
     $.getScript('../assets/js/main.js');
+    $.getScript('../assets/js/jquery.counterup.min.js');
+    
   }
 
 
