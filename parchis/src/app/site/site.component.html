@@ -17,7 +17,7 @@
                               <li><a class="nav-link" href="#services">Services</a></li>
                               <li><a class="nav-link" href="blog.html">Blog</a></li>
                               <li><a class="nav-link" href="#team">Team</a></li>
-                              <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                              <li><a class="nav-link" href="javascript:void(0)" (click)='toggle()'>Contact Us</a></li>
 
                           </ul>
             </div>
@@ -26,6 +26,8 @@
     </div>
   </header><!-- header section end -->
   <!-- hero area start -->
+  <ng-container *ngIf="!this.is_contact">
+
   <section class="hero-area" id="home">
     <div class="hero-area-slider">
       <div class="hero-area-single-slide">
@@ -516,3 +518,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <a href="#" class="scrollToTop">
     <i class="icofont icofont-arrow-up"></i>
   </a>
+
+</ng-container>
+<ng-container *ngIf="this.is_contact">
+  show contact details here site.component.html line 524
+</ng-container>
