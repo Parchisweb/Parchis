@@ -1,0 +1,27 @@
+.scroller{
+
+    
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #999;
+    width: 100%;
+    white-space: nowrap;
+}
+.sc-cont{
+    height: 100px;
+    display: inline-flex;
+}
+.scroller-item{
+    height: 100px;
+    width:100px;
+    float: left;
+    background-color: #45ff9e;
+    margin-left:5px;    
+}
+.blog-body{
+    min-height: 150px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 40px;
+    background-color: #999;
+}

@@ -16,7 +16,7 @@ export class SiteComponent implements AfterViewInit {
   }
   toggle(){
     this.is_contact = !this.is_contact;
-    this.ngAfterViewInit();
+    if(!this.is_contact) window.location.reload();
   }
 
 }

@@ -1,0 +1,23 @@
+.list-group-item{
+    border-radius: 0;
+}
+@media screen and (max-width: 767px) {
+    .leftpanel{
+        position: absolute;
+        left:0;
+        top:0;
+        bottom: 0;
+        width: 250px;
+        padding: 0;
+    }   
+}
+.col-md-3{
+    z-index: 1;
+}
+.col-md-9{
+    z-index: 0;
+}
+.row-container{
+    width: 100%;
+    overflow-x: hidden;
+}
