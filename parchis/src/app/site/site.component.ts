@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+declare var $:any;
 @Component({
   selector: 'app-site',
   templateUrl: './site.component.html',
   styleUrls: ['./site.component.scss']
 })
-export class SiteComponent implements OnInit {
+export class SiteComponent implements AfterViewInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    $.getScript('../assets/js/jquery.min.js');
+    $.getScript('../assets/js/main.js');
+    $.getScript('../assets/js/jquery.counterup.min.js');
+    
   }
+
 
 }
