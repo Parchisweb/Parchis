@@ -36,7 +36,7 @@
                             <ul>
                                 <li><a href="/">Home</a></li>
                                 <li><a href="/blog">Blog</a></li>
-                                <li *ngIf="!editable"><a href="javascript:void(0)" (click)="editable=!editable">Edit</a></li>
+                                <li *ngIf="!editable && LS.data.islogged"><a href="javascript:void(0)" (click)="editable=!editable">Edit</a></li>
                             </ul>
             </div>
           </div>

@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
   providedIn: 'root'
 })
 export class LoginService {
-  public serverurl:string="http://parchisblog.herokuapp.com/";
+  public serverurl:string="https://parchisblog.herokuapp.com/";
   public data:{
     islogged:boolean,
     token:string 
