@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
   providedIn: 'root'
 })
 export class LoginService {
-  public serverurl:string="http://parchisblog.herokuapp.com/";
+  public serverurl:string="https://parchisblog.herokuapp.com/";
   public data:{
     islogged:boolean,
     token:string 
@@ -44,7 +44,8 @@ export class LoginService {
         this.user = data;
         this.data.islogged = true;
         this.data.token = localStorage.getItem('auth_token')
-        console.log(data)
+        //console.log(data)
+        this.refresh();
       }, error=>{
         this.data={
           islogged:false,
@@ -74,7 +75,7 @@ export class LoginService {
           localStorage.setItem('auth_token', this.data.token);
           this.check_user();
         } 
-        this.child.refresh();
+        //this.child.refresh();
         this.refresh();
       }, (error)=>{
         if(error.status==400 || 404){
@@ -82,7 +83,7 @@ export class LoginService {
           alert('Wrong credentials were provided, please provide the correct details');
         }
       }, ()=>{
-        document.getElementById("logindiv").style.display="none";
+        //document.getElementById("logindiv").style.display="none";
         this.refresh();
         //window.location.reload();
         //alert('Login Successful');
@@ -114,7 +115,8 @@ export class LoginService {
           alert('Wrong credentials were provided');
         }
         //console.log(response, this.child);
-        this.child.refresh();
+        //this.child.refresh();
+        this.refresh();
       }, (error)=>{
         localStorage.removeItem('auth_token');
         this.data={
@@ -132,6 +134,7 @@ export class LoginService {
   //refresh childs
   child_elements=[];
   refresh(){
+    //console.log(this.child_elements);
     for(let x in this.child_elements){
       this.child_elements[x].refresh();
     }
@@ -140,4 +143,13 @@ export class LoginService {
     if(this.child_elements.indexOf(x)==-1){
       this.child_elements.push(x);
     }
-  }}
+  }
+  update(first_name, last_name){
+    this.http.patch(this.user.url, 
+            new HttpParams().set('first_name', first_name)
+            .set('last_name', last_name),
+            {headers:this.getHeaders()}).subscribe(data=>{
+              this.check_user();
+            })
+  }
+}
