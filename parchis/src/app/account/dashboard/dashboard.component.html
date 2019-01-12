@@ -1,88 +1,68 @@
-<!-- <div class="row-container">
-    <div class="row">
-        <div class="col-md-3 leftpanel">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Dashboard</h5>
-              <p class="card-text">Welcome {{this.LS.user.first_name}} {{this.LS.user.last_name}}</p>
-            </div>
-          </div>
-          <div class="list-group">
-            <a *ngFor="let n of nav_list" (click)="nav(n)" href="javascript:void(0)" class="list-group-item list-group-item-action" [ngClass]="{'active':n==nav_selected}">{{n}}</a>
-          </div>
-        </div>
-        <div class="col-md-9">
-            <ng-container *ngIf="nav_selected=='My Account'">
-              <div class="card">
-                <div class="card-header">
-                  Personal Details
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Name</h5>
-                  
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">First</span>
-                      </div>
-                      <input class="form-control" type="text" value="{{this.LS.user.first_name}}" #fname>
-                    </div>
-
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">Last</span>
-                      </div>
-                      <input class="form-control" type="text"value="{{this.LS.user.last_name}}" #lname>
-                    </div>
-                  
-                </div>
-                <div class="card-footer">
-                  <button class="btn btn-success" type="button" (click)="this.LS.update(fname.value, lname.value)">Update</button>
-                </div>
-              </div>
-            </ng-container>
-            <ng-container *ngIf="nav_selected=='Blogs'">
-                <div class="card">
-                  <div class="card-header">
-                    Create New Blog
-                  </div>
-                  <div class="card-body">
-                                          <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">Name</span>
-                        </div>
-                        <input class="form-control" type="text" value="" #bname>
-                      </div>
-                  </div>
-                  <div class="card-footer">
-                    <button class="btn btn-success" type="button" (click)="this.BS.createBlog(bname.value)">Create</button>
-                  </div>
-                </div>
-
-                <div>
-                  <div class="card" *ngFor="let b of this.BS.blog_list">
-                    <div class="card-body">
-                      <a class="card-title" href="/blog/{{b.name}}" target="_blank">{{b.name}}</a>
-                      <p class="card-text">{{b.body}}</p>
-                    </div>
-                  </div>
-                </div>
-              </ng-container>
-        </div>
-        
-      </div>
-</div> -->
 <div class="sidebar">
-    <a class="active" href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a style="background:#4a148c;color:#fff;">Welcome {{this.LS.user.first_name}} {{this.LS.user.last_name}}</a>
+    <a *ngFor="let n of nav_list" (click)="nav(n)" href="javascript:void(0)"  [ngClass]="{'active':n==nav_selected}">{{n}}</a>
   </div>
   
   <!-- Page content -->
   <div class="content">
-    <nav>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item active">Text</li>
-      </ol>
-    </nav>
+      <div class="row">
+          <div class="col-md-7" style="padding:10px;">
+              <ng-container *ngIf="nav_selected=='My Account'">
+                <div class="card">
+                  <div class="card-header text-center">
+                    <h3>Personal Details</h3>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"> EDIT NAME</h5>
+                    
+                      <div class="input-group">
+                        <div class="input-group-prepend ">
+                          <span class="input-group-text">First</span>
+                        </div>
+                        <input class="form-control" type="text" value="{{this.LS.user.first_name}}" #fname>
+                      </div><br>
+  
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Last</span>
+                        </div>
+                        <input class="form-control" type="text"value="{{this.LS.user.last_name}}" #lname>
+                      </div>
+                    
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-success" type="button" (click)="this.LS.update(fname.value, lname.value)">Update</button>
+                  </div>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="nav_selected=='Blogs'">
+                  <div class="card">
+                    <div class="card-header">
+                      Create New Blog
+                    </div>
+                    <div class="card-body">
+                                            <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Name</span>
+                          </div>
+                          <input class="form-control" type="text" value="" #bname>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                      <button class="btn btn-success" type="button" (click)="this.BS.createBlog(bname.value)">Create</button>
+                    </div>
+                  </div>
+  
+                  <div>
+                    <div class="card" *ngFor="let b of this.BS.blog_list">
+                      <div class="card-body">
+                        <a class="card-title" href="/blog/{{b.name}}" target="_blank">{{b.name}}</a>
+                        <p class="card-text">{{b.body}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+          </div>
+          
+        </div>
   </div>

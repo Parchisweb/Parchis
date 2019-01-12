@@ -13,6 +13,7 @@ import { DashboardComponent } from './account/dashboard/dashboard.component';
 
 const appRoutes: Routes = [
   {path:'', component: SiteComponent},
+  {path:'d', component: DashboardComponent},
   { path: 'site', component: SiteComponent,
     children: [
       {path: 'blog', component:BlogComponent},
