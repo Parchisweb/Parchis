@@ -10,6 +10,7 @@ import { BlogComponent } from './site/components/blog/blog.component';
 import { CommentComponent } from './site/components/blog/comment/comment.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './account/dashboard/dashboard.component';
+import { DetailsComponent } from './site/components/blog/details/details.component';
 
 const appRoutes: Routes = [
   {path:'', component: SiteComponent},
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     SiteComponent,
     BlogComponent,
     CommentComponent,
-    DashboardComponent
+    DashboardComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
