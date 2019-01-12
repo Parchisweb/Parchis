@@ -32,9 +32,10 @@ export class DetailsComponent implements OnInit {
         this.blog.body=JSON.parse(blog.body);
         break;
       }
-      console.log(blog);
-      
+     
     }
+    console.log(this.blog);
+      
   }
 
 }

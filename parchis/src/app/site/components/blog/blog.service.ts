@@ -17,7 +17,7 @@ export class BlogService {
                                 .set("body", JSON.stringify({
                                   name:'User Name',
                                   date:'10 Dec 2019',
-                                  image_url:'assets/img/details.jpg',
+                                  img_url:'assets/img/details.jpg',
                                   disc:'DEscription'
                                 })),
                                 {
