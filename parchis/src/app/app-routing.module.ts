@@ -10,15 +10,11 @@ const routes: Routes = [
     component:AccountComponent
   },
   {
-    path:'blog/:id',
-    component:BlogComponent
-  },
-  {
     path:'blogs',
     component:BlogComponent
   },
   {
-    path:'blogdetail',
+    path:'blog/:id',
     component:DetailsComponent
   },
 ];
