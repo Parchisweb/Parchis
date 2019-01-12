@@ -9,7 +9,6 @@ import { SiteComponent } from './site/site.component';
 import { BlogComponent } from './site/components/blog/blog.component';
 import { CommentComponent } from './site/components/blog/comment/comment.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ContactComponent } from './site/components/contact/contact.component';
 import { DashboardComponent } from './account/dashboard/dashboard.component';
 
 const appRoutes: Routes = [
@@ -31,7 +30,6 @@ const appRoutes: Routes = [
     SiteComponent,
     BlogComponent,
     CommentComponent,
-    ContactComponent,
     DashboardComponent
   ],
   imports: [
