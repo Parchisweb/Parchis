@@ -43,9 +43,9 @@
     ------------------------------ */
 	$(window).on('scroll', function() {
 		if ($(this).scrollTop() > 600) {
-			$('.scrollToTop').fadeIn();
+			$('/blogs').fadeIn();
 		} else {
-			$('.scrollToTop').fadeOut();
+			$('/blogs').fadeOut();
 		}
 	});
 	$('.scrollToTop').on('click', function () {

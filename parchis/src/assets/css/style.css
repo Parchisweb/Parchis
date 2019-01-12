@@ -1202,7 +1202,7 @@ h4.post-title a {
 /*--------------------------------------
 -------- SCROLL-TO-TOP CSS START --------
 ---------------------------------------*/
-.scrollToTop {
+/blogs {
     width: 40px;
 	display: none;
     height: 40px;
@@ -1219,7 +1219,7 @@ h4.post-title a {
     text-align: center;
 	font-size: 18px;
 }
-.scrollToTop:hover {
+/blogs:hover {
     background: #000529;
     background: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%);
     background: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
@@ -1227,7 +1227,7 @@ h4.post-title a {
     border: 1px solid #fff;
     color: #fff;
 }
-.scrollToTop:focus {
+/blogs:focus {
     border: 1px solid #fff;
     color: #fff;
 }
