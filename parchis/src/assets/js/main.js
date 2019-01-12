@@ -41,17 +41,6 @@
 	/*----------------------------
     START - Scroll to Top
     ------------------------------ */
-	$(window).on('scroll', function() {
-		if ($(this).scrollTop() > 600) {
-			$('/blogs').fadeIn();
-		} else {
-			$('/blogs').fadeOut();
-		}
-	});
-	$('.scrollToTop').on('click', function () {
-		$('html, body').animate({scrollTop : 0},2000);
-		return false;
-	});
 	
 	/*----------------------------
     START - Slider activation
