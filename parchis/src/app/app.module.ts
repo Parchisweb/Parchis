@@ -9,6 +9,7 @@ import { SiteComponent } from './site/site.component';
 import { BlogComponent } from './site/components/blog/blog.component';
 import { CommentComponent } from './site/components/blog/comment/comment.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './site/components/contact/contact.component';
 
 const appRoutes: Routes = [
   {path:'', component: SiteComponent},
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     AccountComponent,
     SiteComponent,
     BlogComponent,
-    CommentComponent
+    CommentComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
