@@ -58,6 +58,10 @@ export class BlogService {
       })
   }
   updateBlog(url, blog_name, username, date, img_url, discription){
+    if(img_url.indexOf("https://drive.google.com/file/d/")!=-1){
+      // drive image
+      img_url="https://drive.google.com/uc?export=view&id="+img_url.split("/")[5];
+    }
     console.log(url, blog_name, username, date, img_url, discription);
     this.LS.http.patch(url,
         new HttpParams()
