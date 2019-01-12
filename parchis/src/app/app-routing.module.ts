@@ -11,7 +11,11 @@ const routes: Routes = [
   {
     path:'blog/:id',
     component:BlogComponent
-  }
+  },
+  {
+    path:'blogs',
+    component:BlogComponent
+  },
 ];
 
 @NgModule({

@@ -1,32 +1,193 @@
-<ng-container *ngIf="this.blog!=null">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand">{{blog.name}}</a>
-        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="my-nav" class="collapse navbar-collapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item" *ngIf="!edit_mode">
-              <a class="nav-link" href="javascript:void(0)" (click)='edit_mode=!edit_mode'>Edit</a>
-            </li>
-            <li class="nav-item" *ngIf="edit_mode">
-                <a class="nav-link" href="javascript:void(0)" (click)='edit_mode=!edit_mode'>Save</a>
-              </li>
-          </ul>
+<header class="header">
+    <div class="container">
+      <div class="row flexbox-center">
+        <div class="col-md-2 col-6">
+          <div class="logo">
+            <a href="index.html"><img src="assets/img/logo.png" alt="logo" /></a>
+          </div>
         </div>
-      </nav>
-      <br><br><br><br>
-      <div *ngIf="edit_mode" class="scroller">
-        <div class="sc-cont">
-            <div class="scroller-item card" draggable="true" *ngFor="let x of [1,2,3,4,5,6,7,8,9,0]">
-                <div class="card-body">
-                  name
-                </div>
+        <div class="col-md-10 col-6">
+          <div class="responsive-menu"></div>
+            <div class="mainmenu">
+                          <ul id="primary-menu">
+                              <li><a class="nav-link" href="index.html#home">Home</a></li>
+                              <li><a class="nav-link" href="index.html#feature">Feature</a></li>
+                              <li><a class="nav-link" href="index.html#screenshot">Screenshot</a></li>
+                              <li><a class="nav-link" href="index.html#pricing">Pricing</a></li>
+                              <li><a class="nav-link" href="index.html#team">Team</a></li>
+                              <li><a class="nav-link active" href="index.html#blog">Blog</a></li>
+                              <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+
+                          </ul>
             </div>
         </div>
-        
       </div>
-      <div class="blog-body">
-
+    </div>
+  </header><!-- header section end -->
+  <!-- breadcrumb area start -->
+  <section class="hero-area breadcrumb-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="hero-area-content">
+            <h1>Our Blog</h1>
+                          <ul>
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="blog.html">Blog</a></li>
+                          </ul>
+          </div>
         </div>
-</ng-container>
+      </div>
+    </div>
+  </section><!-- breadcrumb area end -->
+  <!-- blog section start -->
+  <section class="blog-area blog-page" id="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+            <div class="single-post">
+            <div class="post-thumbnail">
+              <a href="blog-detail.html"><img src="assets/img/blog/blog1.jpg" alt="blog"></a>
+            </div>
+            <div class="post-details">
+              <div class="post-author">
+                <a href="blog-detail.html"><i class="icofont icofont-user"></i>John</a>
+                <a href="blog-detail.html"><i class="icofont icofont-speech-comments"></i>Comments</a>
+                <a href="blog-detail.html"><i class="icofont icofont-calendar"></i>21 Feb 2018</a>
+              </div>
+              <h4 class="post-title"><a href="#">Lorem ipsum dolor sit</a></h4>
+              <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="single-post">
+            <div class="post-thumbnail">
+              <a href="blog-detail.html"><img src="assets/img/blog/blog2.jpg" alt="blog"></a>
+            </div>
+            <div class="post-details">
+              <div class="post-author">
+                <a href="blog-detail.html"><i class="icofont icofont-user"></i>John</a>
+                <a href="blog-detail.html"><i class="icofont icofont-speech-comments"></i>Comments</a>
+                <a href="blog-detail.html"><i class="icofont icofont-calendar"></i>21 Feb 2018</a>
+              </div>
+              <h4 class="post-title"><a href="blog-detail.html">Lorem ipsum dolor sit</a></h4>
+              <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="single-post">
+            <div class="post-thumbnail">
+              <a href="blog-detail.html"><img src="assets/img/blog/blog3.jpg" alt="blog"></a>
+            </div>
+            <div class="post-details">
+              <div class="post-author">
+                <a href="blog-detail.html"><i class="icofont icofont-user"></i>John</a>
+                <a href="blog-detail.html"><i class="icofont icofont-speech-comments"></i>Comments</a>
+                <a href="blog-detail.html"><i class="icofont icofont-calendar"></i>21 Feb 2018</a>
+              </div>
+              <h4 class="post-title"><a href="blog-detail.html">Lorem ipsum dolor sit</a></h4>
+              <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="single-post">
+            <div class="post-thumbnail">
+              <a href="blog-detail.html"><img src="assets/img/blog/blog3.jpg" alt="blog"></a>
+            </div>
+            <div class="post-details">
+              <div class="post-author">
+                <a href="blog-detail.html"><i class="icofont icofont-user"></i>John</a>
+                <a href="blog-detail.html"><i class="icofont icofont-speech-comments"></i>Comments</a>
+                <a href="blog-detail.html"><i class="icofont icofont-calendar"></i>21 Feb 2018</a>
+              </div>
+              <h4 class="post-title"><a href="blog-detail.html">Lorem ipsum dolor sit</a></h4>
+              <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="single-post">
+            <div class="post-thumbnail">
+              <a href="blog-detail.html"><img src="assets/img/blog/blog1.jpg" alt="blog"></a>
+            </div>
+            <div class="post-details">
+              <div class="post-author">
+                <a href="blog-detail.html"><i class="icofont icofont-user"></i>John</a>
+                <a href="blog-detail.html"><i class="icofont icofont-speech-comments"></i>Comments</a>
+                <a href="blog-detail.html"><i class="icofont icofont-calendar"></i>21 Feb 2018</a>
+              </div>
+              <h4 class="post-title"><a href="blog-detail.html">Lorem ipsum dolor sit</a></h4>
+              <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="single-post">
+            <div class="post-thumbnail">
+              <a href="blog-detail.html"><img src="assets/img/blog/blog2.jpg" alt="blog"></a>
+            </div>
+            <div class="post-details">
+              <div class="post-author">
+                <a href="blog-detail.html"><i class="icofont icofont-user"></i>John</a>
+                <a href="blog-detail.html"><i class="icofont icofont-speech-comments"></i>Comments</a>
+                <a href="blog-detail.html"><i class="icofont icofont-calendar"></i>21 Feb 2018</a>
+              </div>
+              <h4 class="post-title"><a href="blog-detail.html">Lorem ipsum dolor sit</a></h4>
+              <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+            <div class="pagination">
+                          <ul>
+                              <li><a href="#"><i class="icofont icofont-curved-left"></i></a></li>
+                              <li><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#"><i class="icofont icofont-curved-right"></i></a></li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- blog section end -->
+  <!-- footer section start -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="row">
+                  <div class="col-lg-12">
+          <div class="subscribe-form">
+            <form action="#">
+              <input type="text" placeholder="Your email address here">
+              <button type="submit">Subcribe</button>
+            </form>
+          </div>
+                  </div>
+      </div>
+      <div class="row">
+                  <div class="col-lg-12">
+          <div class="copyright-area">
+            <ul>
+              <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+              <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
+              <li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
+              <li><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
+              <li><a href="#"><i class="icofont icofont-social-google-plus"></i></a></li>
+            </ul>
+            <p>&copy;
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a>CypherOps</a>
+</p>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </footer><!-- footer section end -->
+  <a href="#" class="scrollToTop">
+    <i class="icofont icofont-arrow-up"></i>
+  </a>

@@ -15,7 +15,7 @@
                               <li><a class="nav-link active" href="#home">Home</a></li>
                               <li><a class="nav-link " href="#about">About</a></li>
                               <li><a class="nav-link" href="#services">Services</a></li>
-                              <li><a class="nav-link" href="blog.html">Blog</a></li>
+                              <li><a class="nav-link" href="/blogs">Blog</a></li>
                               <li><a class="nav-link" href="#team">Team</a></li>
                               <li><a class="nav-link" href="javascript:void(0)" (click)='toggle()'>Contact Us</a></li>
 
@@ -127,34 +127,34 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" style="cursor:pointer;">
         <div class="col-lg-1">
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2" data-toggle="modal" data-target="#exampleModal">
             <div class="single-about-box">
             <i class="icofont icofont-like"></i>
             <h4>Social Media Management</h4>
           </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2" data-toggle="modal" data-target="#exampleModal1">
             <div class="single-about-box">
             <i class="icofont icofont-play-alt-3"></i>
             <h4>Professional Videos</h4><br>
           </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2" data-toggle="modal" data-target="#exampleModal2">
             <div class="single-about-box">
             <i class="icofont icofont-web"></i>
             <h4>Website Building & Management</h4>
           </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2" data-toggle="modal" data-target="#exampleModal3">
             <div class="single-about-box">
             <i class="icofont icofont-bullhorn"></i>
             <h4>Brand Management</h4><br>
           </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2" data-toggle="modal" data-target="#exampleModal4">
             <div class="single-about-box">
             <i class="icofont icofont-dashboard-web"></i>
             <h4>Promotional Graphics</h4><br>
@@ -591,3 +591,25 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <a href="#" class="scrollToTop">
   <i class="icofont icofont-arrow-up"></i>
 </a>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div  style="background:#fff;width:22rem;">
+        
+            <div class="single-post">
+            <div class="post-thumbnail">
+              <a href="blog.html"><img src="assets/img/blog/blog1.jpg" alt="blog"></a>
+            </div>
+            <div class="post-details">
+              <div class="post-author">
+                <a href="blog.html"><i class="icofont icofont-user"></i>John</a>
+                <a href="blog.html"><i class="icofont icofont-speech-comments"></i>Comments</a>
+                <a href="blog.html"><i class="icofont icofont-calendar"></i>21 Feb 2018</a>
+              </div>
+              <h4 class="post-title"><a href="blog.html">Lorem ipsum dolor sit</a></h4>
+              <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+            </div>
+          </div>
+        
+    </div>
+  </div>
+</div>
