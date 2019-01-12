@@ -9,22 +9,22 @@
           <div class="col-md-7" style="padding:10px;">
               <ng-container *ngIf="nav_selected=='My Account'">
                 <div class="card">
-                  <div class="card-header text-center">
+                  <div class="card-header text-center" style="background:#4a148c;color:#fff;">
                     <h3>Personal Details</h3>
                   </div>
                   <div class="card-body">
                     <h5 class="card-title"> EDIT NAME</h5>
                     
                       <div class="input-group">
-                        <div class="input-group-prepend ">
-                          <span class="input-group-text">First</span>
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" style="background:#4a148c;color:#fff;">First</span>
                         </div>
                         <input class="form-control" type="text" value="{{this.LS.user.first_name}}" #fname>
                       </div><br>
   
                       <div class="input-group">
                         <div class="input-group-prepend">
-                          <span class="input-group-text">Last</span>
+                          <span class="input-group-text" style="background:#4a148c;color:#fff;">Last</span>
                         </div>
                         <input class="form-control" type="text"value="{{this.LS.user.last_name}}" #lname>
                       </div>
