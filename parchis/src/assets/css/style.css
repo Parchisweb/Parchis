@@ -377,7 +377,6 @@ input::-webkit-input-placeholder {
 -------- HERO AREA CSS START --------
 ---------------------------------------*/
 .hero-area {
-   
 	z-index: 1;
 	position: relative;
     background-repeat: no-repeat;
@@ -395,7 +394,34 @@ input::-webkit-input-placeholder {
 	bottom: 0;
 	z-index: -1;
 	position: absolute;
-	
+}
+.hero-area1 {
+    background-image: url(../img/hero-area.jpg);
+	z-index: 1;
+	position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+	background-attachment: fixed;
+    background-size: cover;
+	overflow: hidden;
+}
+.hero-area::before {
+	content: "";
+	top: 0;
+	left: 0;
+    opacity: 0.85;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	position: absolute;
+}
+.gra{
+    
+
+    background: #000529; /* Old browsers */
+	background: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
 }
 .hero-area-content {
     color: #fff;
