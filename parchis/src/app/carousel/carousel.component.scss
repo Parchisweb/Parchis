@@ -1,0 +1,23 @@
+.carousel, .item, .active {
+    height: 100%;
+}
+.carousel-inner {
+    height: 100%;
+}
+.carousel {
+    margin-bottom: 60px;
+}
+.carousel-caption {
+    z-index: 10;
+}
+.carousel .item {
+    background-color: #777;
+}
+.carousel .carousel-inner .bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel .carousel-inner .bg1 {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/spiderweb.jpg');
+    background-position: center top;
+}

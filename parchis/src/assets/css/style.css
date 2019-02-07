@@ -377,10 +377,9 @@ input::-webkit-input-placeholder {
 -------- HERO AREA CSS START --------
 ---------------------------------------*/
 .hero-area {
-    padding-top: 140px;
+   
 	z-index: 1;
 	position: relative;
-    background-image: url(../img/hero-area.jpg);
     background-repeat: no-repeat;
     background-position: center;
 	background-attachment: fixed;
@@ -396,14 +395,11 @@ input::-webkit-input-placeholder {
 	bottom: 0;
 	z-index: -1;
 	position: absolute;
-	background: #000529; /* Old browsers */
-	background: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+	
 }
 .hero-area-content {
     color: #fff;
-	padding: 80px 0 170px;
+	padding: 80px 0 160px;
 }
 .hero-area-content h1 {
     color: #fff;
@@ -1205,7 +1201,8 @@ h4.post-title a {
 ------ INDEX SLIDER PAGE CSS START -----
 ---------------------------------------*/
 .hero-area-slider .owl-nav div {
-	opacity: 0;
+    opacity: 0;
+  
 }
 .hero-area-slider:hover .owl-nav div {
 	opacity: 1;

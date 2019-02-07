@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './account/dashboard/dashboard.component';
 import { DetailsComponent } from './site/components/blog/details/details.component';
 import { ContactComponent } from './site/components/contact/contact.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 const appRoutes: Routes = [
   {path:'', component: SiteComponent},
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     CommentComponent,
     DashboardComponent,
     DetailsComponent,
-    ContactComponent
+    ContactComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
