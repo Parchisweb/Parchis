@@ -1,157 +1,83 @@
 <header class="header">
-    <div class="container">
-      <div class="row flexbox-center">
-        <div class="col-lg-2 col-md-3 col-6">
-          <div class="logo">
-            <!-- <a href="#home"><img src="assets/img/logo.png" alt="logo" /></a> -->
-            <a href="#home">Parchis</a>
-          </div>
+  <div class="container">
+    <div class="row flexbox-center">
+      <div class="col-lg-2 col-md-3 col-6">
+        <div class="logo">
+          <!-- <a href="#home"><img src="assets/img/logo.png" alt="logo" /></a> -->
+          <a href="#home">Parchis</a>
         </div>
-        <div class="col-lg-10 col-md-9 col-6">
-          <div class="responsive-menu"></div>
-            <div class="mainmenu">
-                          <ul id="primary-menu">
-                              <li><a class="nav-link" href="#home">Home</a></li>
-                              <li><a class="nav-link " href="#about">About</a></li>
-                              <li><a class="nav-link" href="#services">Services</a></li>
-                              <li><a class="nav-link active" href="/blogs">Blog</a></li>
-                              <li><a class="nav-link" href="#team">Team</a></li>
-                              <li><a class="nav-link" href="javascript:void(0)" (click)='toggle()'>Contact Us</a></li>
+      </div>
+      <div class="col-lg-10 col-md-9 col-6">
+        <div class="responsive-menu"></div>
+        <div class="mainmenu">
+          <ul id="primary-menu">
+            <li><a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link " href="#about">About</a></li>
+            <li><a class="nav-link" href="#services">Services</a></li>
+            <li><a class="nav-link active" href="/blogs">Blog</a></li>
+            <li><a class="nav-link" href="#team">Team</a></li>
+            <li><a class="nav-link" href="javascript:void(0)" (click)='toggle()'>Contact Us</a></li>
 
-                          </ul>
-            </div>
+          </ul>
         </div>
       </div>
     </div>
-  </header><!-- header section end -->
-   <!-- breadcrumb area start -->
-   <ng-container *ngIf="blog!=null">
+  </div>
+</header><!-- header section end -->
+<!-- breadcrumb area start -->
+<ng-container *ngIf="blog!=null">
 
-    <section class="hero-area breadcrumb-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="hero-area-content">
-              <h1 [attr.contenteditable]="editable" #blog_name>{{this.blog.name}}</h1>
-                            <ul>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/blog">Blog</a></li>
-                                <li *ngIf="!editable && LS.data.islogged"><a href="javascript:void(0)" (click)="editable=!editable">Edit</a></li>
-                            </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- breadcrumb area end -->
-<section class="blog-detail" id="blog">
+  <section class="hero-area breadcrumb-area">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8">
-            <div class="blog-details">
-            <img src="{{blog.body.img_url}}" alt="blog-details">
-            <div class="post-author">
-              <a href="javascript:void(0)"><i class="icofont icofont-user"></i><span [attr.contenteditable]="editable" #buname>{{blog.body.username}}</span></a>
-              <a href="javascript:void(0)"><i class="icofont icofont-calendar"></i><span [attr.contenteditable]="editable" #bdate>{{blog.body.date}}</span></a>
-              <a href="javascript:void(0)"><i class="icofont icofont-speech-comments"></i><span [attr.contenteditable]="editable" #img_url>{{blog.body.img_url}}</span></a>
-            </div>
-            <p [attr.contenteditable]="editable" #disc>{{blog.body.disc}}</p>
-            <button class="btn btn-primary" type="button" (click)="this.BS.updateBlog(
-              blog.url,
-              blog_name.innerText,
-              buname.innerText,
-              bdate.innerText,
-              img_url.innerText,
-              disc.innerText
-            )" 
-            *ngIf="editable">Save</button>
-          </div>
-            <div class="blog-reply">
-            <h4>Leave a Reply</h4>
-            <form action="#" method="POST">
-              <div class="row">
-                <div class="col-lg-6">
-                  <input type="text" name="replyname" placeholder="Enter Your Name">
-                </div>
-                <div class="col-lg-6">
-                  <input type="email" name="replyemail" placeholder="Enter Your Email">
-                </div>
-                <div class="col-lg-12">
-                  <textarea placeholder="Messege" name="message"></textarea>
-                  <button type="submit" name="replysubmit">Post Comment</button>
-                </div>
-              </div>
-                  </form>
-          </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="sidebar">
-            <div class="widget">
-              <form action="#">
-                <input type="text" name="search" placeholder="Search here">
-                <button type="submit">Go</button>
-              </form>
-            </div>
-            <div class="widget">
-              <h4>Categories</h4>
-              <ul>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Networking</a></li>
-                <li><a href="#">Security</a></li>
-                <li><a href="#">Software</a></li>
-              </ul>
-            </div>
-            <div class="widget">
-              <h4>Latest posts</h4>
-              <ul>
-                <li><a href="#">Savings now offers checking account</a></li>
-                <li><a href="#">Facebook begins Stories on desktop</a></li>
-                <li><a href="#">Nintendo compatible NES30 Arcade now</a></li>
-              </ul>
-            </div>
-            <div class="widget widget-tags">
-              <h4>Tags</h4>
-              <a href="#">Business</a>
-              <a href="#">Networking</a>
-              <a href="#">Latest</a>
-              <a href="#">Popular</a>
-              <a href="#">Security</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-   </ng-container>
-    <!-- blog section end -->
-  <!-- footer section start -->
- <footer class="footer" id="contact">
-    <div class="container">
-      <div class="row">
-                  <div class="col-lg-12">
-          <div class="subscribe-form">
-            <form action="#">
-              <input type="text" placeholder="Your email address here">
-              <button type="submit">Subcribe</button>
-            </form>
-          </div>
-                  </div>
-      </div>
-      <div class="row">
-                  <div class="col-lg-12">
-          <div class="copyright-area">
+        <div class="col-lg-12">
+          <div class="hero-area-content">
+            <h1 [attr.contenteditable]="editable" #blog_name>{{this.blog.name}}</h1>
             <ul>
-              <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-              <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-              <li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
-              <li><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
-              <li><a href="#"><i class="icofont icofont-social-google-plus"></i></a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li *ngIf="!editable && LS.data.islogged"><a href="/edit/{{this.blog.name}}">Edit</a></li>
             </ul>
-            <p>&copy;  
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a>CypherOps</a>
-  </p>
           </div>
-                  </div>
+        </div>
       </div>
     </div>
-  </footer><!-- footer section end -->
+  </section><!-- breadcrumb area end -->
+</ng-container>
+<section class="blog-detail container" id="blog">
+</section>
+
+<!-- blog section end -->
+<!-- footer section start -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="subscribe-form">
+          <form action="#">
+            <input type="text" placeholder="Your email address here">
+            <button type="submit">Subcribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="copyright-area">
+          <ul>
+            <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+            <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
+            <li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
+            <li><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
+            <li><a href="#"><i class="icofont icofont-social-google-plus"></i></a></li>
+          </ul>
+          <p>&copy;
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with
+            <i class="fa fa-heart-o" aria-hidden="true"></i> by <a>CypherOps</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer><!-- footer section end -->

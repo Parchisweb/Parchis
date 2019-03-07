@@ -48,16 +48,16 @@
         <div class="col-lg-4 col-md-6" *ngFor="let blog of this.BS.blog_list">
             <div class="single-post">
             <div class="post-thumbnail">
-              <a href="/blog/{{blog.name}}"><img style="width: 100%; height: 15vw; object-fit: cover;" src="{{blog.body.img_url}}" alt="blog"></a>
+              <a href="/blog/{{blog.name}}"><img style="width: 100%; height: 15vw; object-fit: cover;" src="{{blog.preview.img_url}}" alt="blog"></a>
             </div>
             <div class="post-details">
               <div class="post-author">
-                <a href="blog-detail.html"><i class="icofont icofont-user"></i>{{blog.body.username}}</a>
-                <!--a href="blog-detail.html"><i class="icofont icofont-speech-comments"></i>{{blog.body.img_url}}</a-->
-                <a href="blog-detail.html"><i class="icofont icofont-calendar"></i>{{blog.body.date}}</a>
+                <a href="blog-detail.html"><i class="icofont icofont-user"></i>{{blog.preview.username}}</a>
+                <!--a href="blog-detail.html"><i class="icofont icofont-speech-comments"></i>{{blog.preview.img_url}}</a-->
+                <a href="blog-detail.html"><i class="icofont icofont-calendar"></i>{{blog.preview.date}}</a>
               </div>
               <h4 class="post-title"><a href="#">{{blog.name}}</a></h4>
-              <p>{{blog.body.disc}}</p>
+              <p>{{blog.preview.disc}}</p>
             </div>
           </div>
         </div>

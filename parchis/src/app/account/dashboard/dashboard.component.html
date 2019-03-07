@@ -1,69 +1,121 @@
 <div class="sidebar">
-    <a style="background:#4a148c;color:#fff;">Welcome {{this.LS.user.first_name}} {{this.LS.user.last_name}}</a>
-    <a *ngFor="let n of nav_list" (click)="nav(n)" href="javascript:void(0)"  [ngClass]="{'active':n==nav_selected}">{{n}}</a>
-  </div>
-  
-  <!-- Page content -->
-  <div class="content">
-      <div class="row">
-          <div class="col-md-7" style="padding:10px;">
-              <ng-container *ngIf="nav_selected=='My Account'">
-                <div class="card">
-                  <div class="card-header text-center"  style="background:#4a148c;color:#fff;">
-                    <h3>Personal Details</h3>
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title"> EDIT NAME</h5>
-                    
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" style="background:#4a148c;color:#fff;">First</span>
-                        </div>
-                        <input class="form-control" type="text" value="{{this.LS.user.first_name}}" #fname>
-                      </div><br>
-  
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" style="background:#4a148c;color:#fff;">Last</span>
-                        </div>
-                        <input class="form-control" type="text"value="{{this.LS.user.last_name}}" #lname>
-                      </div>
-                    
-                  </div>
-                  <div class="card-footer">
-                    <button class="btn btn-success" type="button" (click)="this.LS.update(fname.value, lname.value)">Update</button>
-                  </div>
-                </div>
-              </ng-container>
-              <ng-container *ngIf="nav_selected=='Blogs'">
-                  <div class="card" >
-                    <div class="card-header"style="background:#4a148c;color:#fff;">
-                      Create New Blog
-                    </div>
-                    <div class="card-body">
-                                            <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" style="background:#4a148c;color:#fff;">Name</span>
-                          </div>
-                          <input class="form-control" type="text" value="" #bname>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                      <button class="btn btn-success" type="button" (click)="this.BS.createBlog(bname.value)">Create</button>
-                    </div>
-                  </div><br>
-  
-                  <div>
-                      <h4>Blog preview :</h4><br>
-                    <div class="card" *ngFor="let b of this.BS.blog_list">
-                      <div class="card-body">
-                        <a class="card-title" href="/blog/{{b.name}}" target="_blank">{{b.name}}</a>
-                        <p class="card-text">{{b.body}}</p>
-                      </div>
-                    </div>
-                  </div>
-                </ng-container>
+  <a style="background:#4a148c;color:#fff;">Welcome {{this.LS.user.first_name}} {{this.LS.user.last_name}}</a>
+  <a *ngFor="let n of nav_list" (click)="nav(n)" href="javascript:void(0)"
+    [ngClass]="{'active':n==nav_selected}">{{n}}</a>
+</div>
+
+<!-- Page content -->
+<div class="content">
+  <div class="row">
+    <div class="col-md-7" style="padding:10px;">
+      <ng-container *ngIf="nav_selected=='My Account'">
+        <div class="card">
+          <div class="card-header text-center" style="background:#4a148c;color:#fff;">
+            <h3>Personal Details</h3>
           </div>
-          
+          <div class="card-body">
+            <h5 class="card-title"> EDIT NAME</h5>
+
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="background:#4a148c;color:#fff;">First</span>
+              </div>
+              <input class="form-control" type="text" value="{{this.LS.user.first_name}}" #fname>
+            </div><br>
+
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="background:#4a148c;color:#fff;">Last</span>
+              </div>
+              <input class="form-control" type="text" value="{{this.LS.user.last_name}}" #lname>
+            </div>
+
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success" type="button"
+              (click)="this.LS.update(fname.value, lname.value)">Update</button>
+          </div>
         </div>
+      </ng-container>
+
+    </div>
+
   </div>
+  <ng-container *ngIf="nav_selected=='Blogs'">
+    <div class="card">
+      <div class="card-header" style="background:#4a148c;color:#fff;">
+        Create New Blog
+      </div>
+      <div class="card-body">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" style="background:#4a148c;color:#fff;">Name</span>
+          </div>
+          <input class="form-control" type="text" value="" #bname>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-success" type="button" (click)="this.BS.createBlog(bname.value)">Create</button>
+      </div>
+    </div><br>
+
+    <h4>Blog preview :</h4><br>
+    <div class="row">
+
+      <div class="col-md-4" *ngFor="let b of this.BS.blog_list">
+        <div class="card">
+          <img class="card-img-top" src="{{b.preview?.img_url}}" alt="">
+          <div class="card-body">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="my-addon">Name</span>
+              </div>
+              <input class="form-control" type="text" value="{{b.name}}" placeholder="Recipient's my-addon"
+                aria-label="Recipient's " aria-describedby="my-addon" #inpname>
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="my-addon">Image Url</span>
+              </div>
+              <input class="form-control" type="text" value="{{b.preview.img_url}}" placeholder="image url for preview"
+                aria-label="Recipient's " aria-describedby="my-addon" #inpimg>
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="my-addon">Date</span>
+              </div>
+              <input class="form-control" type="text" value="{{b.preview.date}}" placeholder="Date to show"
+                aria-label="Recipient's " aria-describedby="my-addon" #inpdate>
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="my-addon">User Name</span>
+              </div>
+              <input class="form-control" type="text" value="{{b.preview.username}}" placeholder="User name to show"
+                aria-label="Recipient's " aria-describedby="my-addon" #inpusername>
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="my-addon">Discription</span>
+              </div>
+              <textarea class="form-control" type="text" value="{{b.preview.disc}}" placeholder="Description"
+                aria-label="Recipient's " aria-describedby="my-addon" #inpdisc></textarea>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-success" type="button" (click)="BS.updateBlog(
+                            b.url, 
+                            inpname.value,
+                            inpusername.value,
+                            inpdate.value,
+                            inpimg.value,
+                            inpdisc.value,
+                            b.body
+                            );">Save</button>
+              <button class="btn btn-danger" type="button">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

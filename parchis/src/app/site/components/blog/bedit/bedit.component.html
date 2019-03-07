@@ -1,0 +1,16 @@
+
+<ng-container *ngIf="LS.data.islogged">
+
+  <nav class="nav">
+    <li class="nav-item">
+      <a class="nav-link btn-primary" href="javascript:void(0)" (click)="save();"><i class="fas fa-save"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn-primary" target="_blank" href="/blog/{{this.blog.name}}"><i class="fas fa-eye"></i></a>
+    </li>
+  </nav>
+</ng-container>
+<iframe id="editorframe" style="width:100%; height:100%; min-height:500px;" ></iframe>
+<ng-container>
+  You must be logged in to view this content !
+</ng-container>
