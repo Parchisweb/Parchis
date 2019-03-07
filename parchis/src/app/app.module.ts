@@ -13,6 +13,8 @@ import { DashboardComponent } from './account/dashboard/dashboard.component';
 import { DetailsComponent } from './site/components/blog/details/details.component';
 import { ContactComponent } from './site/components/contact/contact.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { BeditComponent } from './site/components/blog/bedit/bedit.component';
+
 
 const appRoutes: Routes = [
   {path:'', component: SiteComponent},
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     DetailsComponent,
     ContactComponent,
-    CarouselComponent
+    CarouselComponent,
+    BeditComponent
   ],
   imports: [
     BrowserModule,
