@@ -25,9 +25,6 @@ export class BeditComponent implements AfterViewInit {
 
     this.subs = this.route.params.subscribe(params => {
       this.id = params['id'];
-      document.getElementById('editorframe')['src']='/assets/bedit/index.html';
-      var self=this;
-      document.getElementById('editorframe')['onload']=()=>self.loaded(self);
       // $.getScript('../assets/js/jquery.min.js');
       // $.getScript('../assets/js/main.js');
       // $.getScript('../assets/js/jquery.counterup.min.js');
@@ -53,6 +50,10 @@ export class BeditComponent implements AfterViewInit {
       }
 
     }
+    document.getElementById('editorframe')['src']='/assets/bedit/index.html';
+      var self=this;
+      document.getElementById('editorframe')['onload']=()=>self.loaded(self);
+      
     console.log(this.blog);
 
   }
