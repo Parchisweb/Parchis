@@ -1226,6 +1226,9 @@ h4.post-title a {
 /*--------------------------------------
 ------ INDEX SLIDER PAGE CSS START -----
 ---------------------------------------*/
+.hero-area-single-slide{
+min-height: 600px;
+}
 .hero-area-slider .owl-nav div {
     opacity: 0;
   
