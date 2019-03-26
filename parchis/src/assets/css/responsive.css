@@ -306,7 +306,7 @@
 	}
 	.hero-area {
 		/* padding-top: 130px; */
-		min-height:680px;
+		min-height:680px !important;
 	}
 	.single-about-box {
 		padding: 5px 0 25px;
