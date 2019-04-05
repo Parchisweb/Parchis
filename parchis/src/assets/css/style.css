@@ -335,7 +335,8 @@ input::-webkit-input-placeholder {
 }
 .mainmenu li a {
     display: inline-block;
-    color: #fff;
+    color: #000;
+    font-weight: bolder;
     position: relative;
     padding: 5px 16px;
 	margin: 0 3px;
@@ -348,7 +349,8 @@ input::-webkit-input-placeholder {
 .slicknav_menu a.active,
 .mainmenu ul li a:hover,
 .mainmenu ul li a.active {
-    border: 1px solid #fff;
+    border: 1px solid #000;
+    background:rgba(0, 150, 136, 0.7) 
 }
 .mainmenu {
     display: block;
@@ -357,7 +359,7 @@ input::-webkit-input-placeholder {
 	display: none;
 }
 .header.sticky {
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #000;
 	background: #000529; /* Old browsers */
 	background: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%); /* Chrome10-25,Safari5.1-6 */
